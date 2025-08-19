@@ -625,20 +625,25 @@
                 padding: 100px 0 60px;
             }
 
-            .hero-title-container h1 {
-                font-size: 1.8rem !important;
-                line-height: 1.2 !important;
+            .hero-title-static,
+            .hero-title-dynamic {
+                font-size: 38px;
+                letter-spacing: 1px;
+            }
+
+            .hero-title-dynamic {
+                min-width: 160px;
+            }
+
+            .hero-title-container {
+                flex-direction: column;
+                gap: 8px;
             }
 
             .hero p {
-                font-size: 1rem;
-                padding: 0 16px;
+                font-size: 14px;
+                margin-top: 15px;
                 line-height: 1.4;
-            }
-
-            .hero-btn {
-                padding: 14px 28px !important;
-                font-size: 0.95rem !important;
             }
 
             .about,
@@ -649,76 +654,44 @@
                 padding: 60px 0;
             }
 
-            .about-content {
-                padding: 32px 16px !important;
-                gap: 24px !important;
-            }
-
             .about h2,
             .services h2,
-            .testimonials h2,
+            .contact h2,
             .instagram h2 {
-                font-size: 1.6rem !important;
+                font-size: 28px;
                 margin-bottom: 40px;
-                padding: 0 16px;
             }
 
-            .about p {
-                font-size: 0.95rem !important;
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
             }
 
-            .service-card,
-            .testimonial-card {
-                padding: 24px 16px !important;
-                margin: 0 8px;
+            .service-card h3 {
+                font-size: 20px;
             }
 
-            .service-card h3,
-            .testimonial-card h4 {
-                font-size: 1.1rem !important;
+            .service-card p {
+                font-size: 16px;
             }
 
-            .service-card p,
             .testimonial-card p {
-                font-size: 0.9rem !important;
+                font-size: 16px;
             }
 
-            .contact > .container > div {
-                padding: 32px 16px !important;
-                margin: 0 8px !important;
+            .instagram-post {
+                min-width: 200px;
+                height: 200px;
             }
 
             .contact h2 {
-                font-size: 1.6rem !important;
                 margin-bottom: 15px;
             }
 
             .contact-subtitle {
-                font-size: 1.1rem !important;
+                font-size: 18px;
                 margin-bottom: 40px;
-            }
-
-            .submit-btn {
-                padding: 14px 32px !important;
-                font-size: 0.95rem !important;
-            }
-
-            .instagram-post {
-                min-width: 200px !important;
-                height: 200px !important;
-            }
-
-            .container {
-                padding: 0 8px !important;
-            }
-
-            .logo {
-                font-size: 1.2rem !important;
-            }
-
-            .logo img {
-                height: 32px !important;
-                width: 32px !important;
             }
         }
 
