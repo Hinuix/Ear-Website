@@ -1,0 +1,788 @@
+/* ================================================
+   LOWEKEYFIT WEBSITE STYLES
+   Clean, modern fitness website with marble pink theme
+   ================================================ */
+
+/* ================================================
+   CSS VARIABLES (GLOBAL COLORS & SETTINGS)
+   ================================================ */
+:root {
+    /* Color Palette - Marble Pink Theme */
+    --primary-bg: #fff6fa;        /* Light pink background */
+    --secondary-bg: #f5f5f7;      /* Light grey background */
+    --tertiary-bg: #f7f7fa;       /* Very light background */
+    --glass-bg: rgba(255, 255, 255, 0.85);  /* Semi-transparent white */
+    --accent: #c084a1;            /* Soft pink accent color */
+    --text-dark: #1a1a1a;         /* Dark text */
+    --text-muted: #666;           /* Muted grey text */
+    --border: rgba(0, 0, 0, 0.08); /* Light border */
+    
+    /* Gradients */
+    --main-gradient: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, var(--tertiary-bg) 100%);
+    --accent-gradient: linear-gradient(135deg, var(--accent) 0%, #d19bb3 100%);
+}
+
+/* ================================================
+   GLOBAL RESETS & BASE STYLES
+   ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--primary-bg);
+}
+
+/* Container for consistent page width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================================================
+   HEADER & NAVIGATION
+   ================================================ */
+header {
+    background: var(--glass-bg);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    padding: 8px 0;
+    overflow: visible; /* Ensure logo isn't clipped */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    min-height: 60px;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1;
+    min-height: 44px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.logo img {
+    height: 44px;
+    width: 44px; 
+    border-radius: 0; /* Full bleed - no rounded corners */
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; 
+    gap: 32px; 
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ================================================
+   HERO SECTION
+   ================================================ */
+.hero {
+    background: var(--main-gradient), url('https://www.transparenttextures.com/patterns/marble.png');
+    background-size: cover, 400px 400px;
+    background-repeat: no-repeat, repeat;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 140px 0 100px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.hero-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+/* Hero Logo Styling */
+.hero-logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 0; /* Full bleed - no rounded corners */
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Static Title Styling */
+.hero-title-static {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Dynamic Title Styling (if needed for future updates) */
+.hero-title-dynamic {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    color: var(--accent);
+    font-weight: 700;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrolling-text {
+    display: inline-block;
+    color: var(--accent);
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Hero Call-to-Action Buttons */
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 14px 32px;
+    background: var(--accent-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(192, 132, 161, 0.3);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(192, 132, 161, 0.4);
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    box-shadow: none;
+}
+
+.hero-btn.secondary:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* ================================================
+   SECTION STYLES (ABOUT, SERVICES, ETC.)
+   ================================================ */
+
+/* General Section Styling */
+.about, .services, .testimonials, .instagram, .contact {
+    padding: 80px 0;
+    background: var(--primary-bg);
+}
+
+.services, .instagram {
+    background: var(--secondary-bg);
+}
+
+/* Section Headers */
+.about h2, .services h2, .testimonials h2, .instagram h2, .contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+}
+
+/* ================================================
+   ABOUT SECTION
+   ================================================ */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 48px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================================
+   SERVICES SECTION
+   ================================================ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 32px;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* ================================================
+   TESTIMONIALS SECTION
+   ================================================ */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-2px);
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ================================================
+   INSTAGRAM SECTION
+   ================================================ */
+.instagram-scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 24px 0;
+    scroll-behavior: smooth;
+}
+
+.instagram-post {
+    min-width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instagram-post:hover {
+    transform: scale(1.02);
+}
+
+.instagram-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instagram a {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 32px;
+    background: var(--accent-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.instagram a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(192, 132, 161, 0.4);
+}
+
+/* ================================================
+   CONTACT SECTION
+   ================================================ */
+.contact {
+    background: var(--tertiary-bg);
+}
+
+.contact > .container > div {
+    background: white;
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 24px;
+}
+
+.contact h2 {
+    margin-bottom: 16px;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 132, 161, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(192, 132, 161, 0.4);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+footer {
+    background: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 32px 0;
+}
+
+footer p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - TABLET
+   (768px and below)
+   ================================================ */
+@media (max-width: 768px) {
+    /* Hide navigation links on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        padding: 120px 0 80px;
+    }
+
+    .hero-title-container h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* About Section Mobile */
+    .about-content {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 32px !important;
+        padding: 40px 24px !important;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    /* Section Headers Mobile */
+    .services h2,
+    .testimonials h2,
+    .instagram h2 {
+        font-size: 1.75rem !important;
+    }
+
+    /* Grid Layouts Mobile */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .service-card {
+        padding: 32px 24px !important;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .testimonial-card {
+        padding: 32px 24px !important;
+    }
+
+    /* Instagram Mobile */
+    .instagram-scroll {
+        gap: 16px !important;
+        padding: 16px 0 !important;
+    }
+
+    /* Contact Section Mobile */
+    .contact > .container > div {
+        padding: 40px 24px !important;
+        margin: 0 16px !important;
+    }
+
+    /* Prevent iOS zoom on form inputs */
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px !important;
+    }
+
+    /* Global Container Mobile */
+    .container {
+        padding: 0 16px !important;
+    }
+
+    /* Navigation Mobile */
+    nav {
+        padding: 6px 0 !important;
+        min-height: 52px !important;
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+        gap: 8px !important;
+        min-height: 36px !important;
+    }
+
+    .logo img {
+        height: 36px !important;
+        width: 36px !important;
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - MOBILE
+   (480px and below)
+   ================================================ */
+@media (max-width: 480px) {
+    /* Hero Section Small Mobile */
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero-title-container h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 16px;
+        line-height: 1.4;
+    }
+
+    .hero-btn {
+        padding: 14px 28px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Section Spacing Small Mobile */
+    .about,
+    .services,
+    .testimonials,
+    .instagram,
+    .contact {
+        padding: 60px 0;
+    }
+
+    /* About Section Small Mobile */
+    .about-content {
+        padding: 32px 16px !important;
+        gap: 24px !important;
+    }
+
+    .about h2,
+    .services h2,
+    .testimonials h2,
+    .instagram h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 40px;
+        padding: 0 16px;
+    }
+
+    .about p {
+        font-size: 0.95rem !important;
+    }
+
+    /* Cards Small Mobile */
+    .service-card,
+    .testimonial-card {
+        padding: 24px 16px !important;
+        margin: 0 8px;
+    }
+
+    .service-card h3,
+    .testimonial-card h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .service-card p,
+    .testimonial-card p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Contact Section Small Mobile */
+    .contact > .container > div {
+        padding: 32px 16px !important;
+        margin: 0 8px !important;
+    }
+
+    .contact h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 15px;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1rem !important;
+        margin-bottom: 40px;
+    }
+
+    .submit-btn {
+        padding: 14px 32px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Instagram Small Mobile */
+    .instagram-post {
+        min-width: 200px !important;
+        height: 200px !important;
+    }
+
+    /* Global Small Mobile */
+    .container {
+        padding: 0 8px !important;
+    }
+
+    .logo {
+        font-size: 1.1rem !important;
+        gap: 6px !important;
+        min-height: 32px !important;
+    }
+
+    .logo img {
+        height: 32px !important;
+        width: 32px !important;
+    }
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animations to elements as they come into view */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
