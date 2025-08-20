@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+  <defs>
+    <style>
+      .title { font-family: 'Inter', Arial, sans-serif; font-weight: 600; font-size: 56px; fill: #2b2b2b; letter-spacing: 1px; }
+      .subtitle { font-family: 'Inter', Arial, sans-serif; font-weight: 500; font-size: 36px; fill: #6b6b6b; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- Place existing logo image (uses logo.png or logo.jpeg next to this SVG) -->
+  <image href="logo.png" x="200" y="80" width="800" height="800" preserveAspectRatio="xMidYMid meet" />
+
+  <!-- Main title under the logo -->
+  <text x="600" y="1020" text-anchor="middle" class="title">LoweKeyFit</text>
+  <!-- Subtitle with multiplication sign -->
+  <text x="600" y="1080" text-anchor="middle" class="subtitle">× Cierra Lowe</text>
+
+</svg>
