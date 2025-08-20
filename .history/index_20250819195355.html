@@ -52,35 +52,33 @@
             border-bottom: 1px solid var(--border);
             backdrop-filter: blur(12px);
             padding: 8px 0; /* Add vertical padding to header */
-            overflow: visible; /* Ensure logo isn't clipped */
         }
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 0; /* Reduced padding */
-            min-height: 60px; /* Slightly reduced height */
+            padding: 12px 0; /* Reduced since header now has padding */
+            min-height: 64px; /* Ensure consistent nav height */
         }
         .logo {
             display: flex; 
             align-items: center; 
-            gap: 10px; /* Slightly reduced gap */
+            gap: 12px;
             font-family: 'Inter', sans-serif;
-            font-size: 1.4rem; /* Slightly smaller */
+            font-size: 1.5rem;
             color: var(--text-dark);
             font-weight: 600;
-            line-height: 1;
-            min-height: 44px; /* Reduced minimum height */
-            white-space: nowrap; /* Prevent text wrapping */
+            line-height: 1; /* Prevent text from affecting vertical alignment */
+            min-height: 48px; /* Ensure minimum height for logo container */
         }
         .logo img {
-            height: 44px; /* Slightly smaller */
-            width: 44px; 
-            border-radius: 0; /* Full bleed - no rounded corners */
+            height: 48px; 
+            width: 48px; 
+            border-radius: 50%; 
             object-fit: cover;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
-            display: block;
+            flex-shrink: 0; /* Prevent image from shrinking */
+            display: block; /* Ensure proper image rendering */
         }
         .nav-links {
             display: flex; gap: 32px; list-style: none;
@@ -619,14 +617,12 @@
             }
 
             nav {
-                padding: 6px 0 !important;
-                min-height: 52px !important; /* Proportional to desktop */
+                padding: 12px 0 !important;
+                min-height: 56px !important; /* Slightly smaller on mobile */
             }
 
             .logo {
-                font-size: 1.2rem !important;
-                gap: 8px !important; /* Reduced gap for mobile */
-                min-height: 36px !important;
+                font-size: 1.3rem !important;
             }
 
             .logo img {
@@ -729,9 +725,7 @@
             }
 
             .logo {
-                font-size: 1.1rem !important;
-                gap: 6px !important; /* Smaller gap for very small screens */
-                min-height: 32px !important;
+                font-size: 1.2rem !important;
             }
 
             .logo img {
@@ -768,7 +762,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="logo.jpeg" alt="Lowekeyfit Logo">
+                    <img src="new-logo.png" alt="Lowekeyfit Logo">
                     <span>Lowekeyfit × by Cierra Lowe</span>
                 </div>
                 <ul class="nav-links">
@@ -788,7 +782,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-title-container">
-                    <h1 style="font-family:'Inter',sans-serif;font-size:3rem;color:var(--text-dark);font-weight:700;margin:0;">LoweKeyFit × by Cierra Lowe</h1>
+                    <h1 style="font-family:'Inter',sans-serif;font-size:3rem;color:var(--text-dark);font-weight:700;margin:0;">Lowe Key Fitness</h1>
                 </div>
                 <p>Personal coaching that blends science, empathy, and energy. Move better, feel stronger, and become your best self—inside and out.</p>
                 <div class="hero-cta">

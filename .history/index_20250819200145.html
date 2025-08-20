@@ -112,6 +112,8 @@
             gap: 16px;
             flex-wrap: wrap;
             margin-bottom: 24px;
+            position: relative;
+            z-index: 2; /* Above the background logo */
         }
         .hero-title-static {
             font-family: 'Inter', sans-serif;
@@ -141,12 +143,16 @@
             color: var(--text-muted);
             text-align: center;
             line-height: 1.7;
+            position: relative;
+            z-index: 2; /* Above the background logo */
         }
         .hero-cta {
             display: flex;
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2; /* Above the background logo */
         }
         .hero-btn {
             padding: 14px 32px;
