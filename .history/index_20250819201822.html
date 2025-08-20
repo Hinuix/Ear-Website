@@ -106,9 +106,9 @@
             position: relative;
         }
         .hero-logo {
-            margin: 0 auto 40px;
-            width: 240px;
-            height: 240px;
+            margin: 0 auto 32px;
+            width: 80px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,9 +118,7 @@
             height: 100%;
             object-fit: contain;
             border-radius: 8px;
-            mix-blend-mode: multiply; /* Removes light backgrounds */
-            filter: contrast(1.2) brightness(1.1); /* Enhances the logo elements */
-            background: transparent;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         .hero-title-container {
             display: flex;
@@ -562,9 +560,47 @@
             }
 
             .hero-logo {
-                width: 180px;
-                height: 180px;
-                margin-bottom: 32px;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 24px;
+            }
+
+            .logo-barbell {
+                width: 50px;
+                height: 8px;
+            }
+
+            .logo-barbell::before,
+            .logo-barbell::after {
+                width: 6px;
+                height: 18px;
+                top: -5px;
+            }
+
+            .fork-handle {
+                width: 2px;
+                height: 30px;
+            }
+
+            .fork-prongs {
+                width: 8px;
+                height: 10px;
+            }
+
+            .fork-prongs::before,
+            .fork-prongs::after {
+                width: 1.5px;
+                height: 10px;
+            }
+
+            .fork-prongs .middle-prong {
+                width: 1.5px;
+                height: 12px;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
             }
 
             .hero-title-container h1 {
@@ -665,9 +701,47 @@
             }
 
             .hero-logo {
-                width: 120px;
-                height: 120px;
-                margin-bottom: 24px;
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+
+            .logo-barbell {
+                width: 40px;
+                height: 6px;
+            }
+
+            .logo-barbell::before,
+            .logo-barbell::after {
+                width: 5px;
+                height: 14px;
+                top: -4px;
+            }
+
+            .fork-handle {
+                width: 2px;
+                height: 24px;
+            }
+
+            .fork-prongs {
+                width: 6px;
+                height: 8px;
+            }
+
+            .fork-prongs::before,
+            .fork-prongs::after {
+                width: 1px;
+                height: 8px;
+            }
+
+            .fork-prongs .middle-prong {
+                width: 1px;
+                height: 10px;
+            }
+
+            .logo-circle {
+                width: 50px;
+                height: 50px;
             }
 
             .hero-title-container h1 {
@@ -817,7 +891,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-logo">
-                    <img src="logo.jpeg" alt="LoweKeyFit Logo">
+                    <div class="logo-circle"></div>
+                    <div class="logo-barbell"></div>
+                    <div class="logo-fork">
+                        <div class="fork-prongs">
+                            <div class="middle-prong"></div>
+                        </div>
+                        <div class="fork-handle"></div>
+                    </div>
                 </div>
                 <div class="hero-title-container">
                     <h1 style="font-family:'Inter',sans-serif;font-size:3rem;color:var(--text-dark);font-weight:700;margin:0;">LoweKeyFit × by Cierra Lowe</h1>

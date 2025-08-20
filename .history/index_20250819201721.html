@@ -106,21 +106,93 @@
             position: relative;
         }
         .hero-logo {
-            margin: 0 auto 40px;
-            width: 240px;
-            height: 240px;
+            margin: 0 auto 32px;
+            width: 80px;
+            height: 80px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .hero-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
-            mix-blend-mode: multiply; /* Removes light backgrounds */
-            filter: contrast(1.2) brightness(1.1); /* Enhances the logo elements */
-            background: transparent;
+        .logo-barbell {
+            position: relative;
+            width: 70px;
+            height: 12px;
+            background: #1a535c;
+            border-radius: 2px;
+            z-index: 2;
+        }
+        .logo-barbell::before,
+        .logo-barbell::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 24px;
+            background: #1a535c;
+            border-radius: 2px;
+            top: -6px;
+        }
+        .logo-barbell::before {
+            left: -2px;
+        }
+        .logo-barbell::after {
+            right: -2px;
+        }
+        .logo-fork {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+        .fork-handle {
+            width: 3px;
+            height: 40px;
+            background: #722f37;
+            border-radius: 1.5px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .fork-prongs {
+            width: 12px;
+            height: 15px;
+            position: relative;
+            margin: 0 auto -2px;
+        }
+        .fork-prongs::before,
+        .fork-prongs::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background: #722f37;
+            border-radius: 1px;
+        }
+        .fork-prongs::before {
+            left: 2px;
+        }
+        .fork-prongs::after {
+            right: 2px;
+        }
+        .fork-prongs .middle-prong {
+            position: absolute;
+            width: 2px;
+            height: 18px;
+            background: #722f37;
+            border-radius: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -3px;
+        }
+        .logo-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #722f37;
+            border-radius: 50%;
+            opacity: 0.3;
         }
         .hero-title-container {
             display: flex;
@@ -562,9 +634,47 @@
             }
 
             .hero-logo {
-                width: 180px;
-                height: 180px;
-                margin-bottom: 32px;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 24px;
+            }
+
+            .logo-barbell {
+                width: 50px;
+                height: 8px;
+            }
+
+            .logo-barbell::before,
+            .logo-barbell::after {
+                width: 6px;
+                height: 18px;
+                top: -5px;
+            }
+
+            .fork-handle {
+                width: 2px;
+                height: 30px;
+            }
+
+            .fork-prongs {
+                width: 8px;
+                height: 10px;
+            }
+
+            .fork-prongs::before,
+            .fork-prongs::after {
+                width: 1.5px;
+                height: 10px;
+            }
+
+            .fork-prongs .middle-prong {
+                width: 1.5px;
+                height: 12px;
+            }
+
+            .logo-circle {
+                width: 60px;
+                height: 60px;
             }
 
             .hero-title-container h1 {
@@ -662,12 +772,6 @@
         @media (max-width: 480px) {
             .hero {
                 padding: 100px 0 60px;
-            }
-
-            .hero-logo {
-                width: 120px;
-                height: 120px;
-                margin-bottom: 24px;
             }
 
             .hero-title-container h1 {
@@ -817,7 +921,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-logo">
-                    <img src="logo.jpeg" alt="LoweKeyFit Logo">
+                    <div class="logo-circle"></div>
+                    <div class="logo-barbell"></div>
+                    <div class="logo-fork">
+                        <div class="fork-prongs">
+                            <div class="middle-prong"></div>
+                        </div>
+                        <div class="fork-handle"></div>
+                    </div>
                 </div>
                 <div class="hero-title-container">
                     <h1 style="font-family:'Inter',sans-serif;font-size:3rem;color:var(--text-dark);font-weight:700;margin:0;">LoweKeyFit × by Cierra Lowe</h1>
