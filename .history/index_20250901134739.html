@@ -1127,11 +1127,9 @@
                 setTimeout(() => {
                     currentIndex = (currentIndex + 1) % words.length;
                     element.textContent = words[currentIndex];
-                    requestAnimationFrame(() => {
-                        element.classList.remove('fade');
-                    });
-                }, 800); // Increased from 500ms to 800ms for smoother transition
-            }, 4000); // Increased from 3000ms to 4000ms for better readability
+                    element.classList.remove('fade');
+                }, 500);
+            }, 3000);
         }
 
         // Initialize when page loads
